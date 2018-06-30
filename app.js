@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
-var db = mongoose.connect('mongodb://<username>:<password>@ds219641.mlab.com:19641/chuckdb');
+require('dotenv').config();
+var db = mongoose.connect(process.env.MONGO_URL);
 
 var bodyParser = require('body-parser');
 
